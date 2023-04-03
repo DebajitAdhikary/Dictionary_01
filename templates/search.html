@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dictionary App</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Search Results</h1>
+      {% if result %}
+        <table>
+          <tr>
+            <th>Word</th>
+            <th>Meaning</th>
+            <th>Sentence</th>
+            <th>Bengali Translation</th>
+          </tr>
+          <tr>
+            <td>{{ result[0] }}</td>
+            <td>{{ result[1] }}</td>
+            <td>{{ result[2] }}</td>
+            <td>{{ result[3] }}</td>
+          </tr>
+        </table>
+      {% else %}
+        <p>No results found.</p>
+      {% endif %}
+      <a href="/">Back to search</a>
+    </div>
+  </body>
+</html>

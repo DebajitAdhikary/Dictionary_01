@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dictionary App</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Dictionary App</h1>
+      <form action="/search" method="POST">
+        <input type="text" name="search_word" placeholder="Enter word here">
+        <input type="submit" value="Search">
+      </form>
+    </div>
+  </body>
+</html>
